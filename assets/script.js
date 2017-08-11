@@ -15,4 +15,9 @@ function setNextImage(gallery) {
 
   gallery.style.backgroundImage = 'url(' + images[index] + ')';
   gallery.dataset['index'] = ( index + 1 ) % images.length;
+
+  gallery.classList.add('turned');
+  setTimeout(function () {
+    gallery.classList.remove('turned');
+  }, 250);
 }

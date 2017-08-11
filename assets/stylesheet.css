@@ -48,7 +48,7 @@ h1, h2, h3, h4 {
   height: 240px;
   margin: 16px auto;
   cursor: pointer; }
-  #work .project-gallery:after {
+  #work .project-gallery.browsable:after {
     content: '';
     position: absolute;
     right: 0;
@@ -56,11 +56,14 @@ h1, h2, h3, h4 {
     background: red;
     border-top: 0px solid #ccc;
     border-left: 0px solid #ccc;
-    border-right: 0px solid white;
-    border-bottom: 0px solid white;
+    border-right: 0px solid #efefee;
+    border-bottom: 0px solid #efefee;
     transition: border 0.2s; }
-  #work .project-gallery:hover:after {
+  #work .project-gallery.browsable:hover:after {
     border-width: 12px; }
+  #work .project-gallery.turned:after {
+    transition: border 0.15s;
+    border-width: 0 !important; }
 #work .project-info {
   text-align: left; }
 #work .project-title {
