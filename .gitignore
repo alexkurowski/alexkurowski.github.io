@@ -4,4 +4,5 @@
 .sass-cache
 *.css.map
 
+assets/images
 src/projects

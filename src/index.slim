@@ -45,7 +45,7 @@ html
           - images = Dir.glob("assets/images/#{name.downcase}*jpg").sort
           .project
             h4.project-title = name
-            .project-gallery[ class       = "#{'browsable' if images.length > 1}"
+            .project-gallery[ class       = "#{'browsable' if images.count > 1}"
                               onclick     = 'setNextImage(this)'
                               data-images = images
                               data-index  = 0 ]
