@@ -1,0 +1,39 @@
+name: Alex Kurowski
+title: Full Stack Software Engineer
+email: alex.zneue@gmail.com
+
+
+projects:
+  Yogile:
+    description: Development of a easy-to-use photo sharing platform
+    link: https://yogile.com
+
+  Mentspot:
+    description: Development of a social platform connecting mentors and mentees
+    link: https://www.mentspot.com
+
+  BluuBeam:
+    description: A client-facing dashboard for iBeacons management
+    link: https://bluubeam.com/
+
+  Doublemetrics:
+    description: JavaScript library for measuring how users interact with your website
+    link: http://doublemetrics.com/index
+
+  Viewpoint:
+    description: API contributions
+    link: https://github.com/alexkurowski/Viewpoint/compare/6058707dd38dbfd0fa5e29d5685246ea5905fe07...31d121dd68af831d78498e1d61645f069f0ce4d9
+
+
+personal:
+  Patches:
+    description: A puzzle game made with Unity
+
+  Nabookov:
+    description: A platform for serial writers
+
+  Swaps:
+    description: A puzzle game made with Haxe
+
+  DGUP:
+    description: A tetris clone with multiple game modes

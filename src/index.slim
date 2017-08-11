@@ -1,0 +1,76 @@
+- require 'yaml'
+- data = YAML.load_file 'src/data.yml'
+
+- name     = data['name']
+- title    = data['title']
+- email    = data['email']
+- projects = data['projects']
+- personal = data['personal']
+
+
+doctype html
+html
+  head
+    title #{name} | #{title}
+    meta name='keywords' content='webdev full stack web development alex kurowski'
+    meta name='author' content='Alex Kurowski'
+
+    link rel='stylesheet' href='assets/stylesheet.css'
+    link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'
+    script src='assets/script.js'
+
+  body
+    #navbar
+      span About
+      span Projects
+      span Contact
+
+
+    #intro.page
+      .content
+        h1 = name
+        h2 = title
+
+
+    #about.page
+      .content
+        h3 List of usual tools here
+
+
+    #work.page
+      .content
+        h3 Major projects
+
+        - projects.each do |name, project|
+          .project
+            h4.project-title = name
+            .project-gallery[ onclick     = 'setNextImage(this)'
+                              data-images = Dir.glob("assets/images/#{name.downcase}*jpg").sort
+                              data-index  = 0 ]
+            .project-description = project['description']
+            a.project-link href = project['link']
+              | link
+            hr
+
+
+        h3 Personal projects
+
+        - personal.each do |title, project|
+          .project
+            .project-gallery[ onclick     = 'setNextImage(this)'
+                              data-images = Dir.glob("assets/images/#{name.downcase}*jpg") \
+                              data-index  = 0 ]
+            .project-info
+              .project-title = title
+              .project-description = project['description']
+            .clear
+
+
+    #contact.page.dark
+      .content
+        a.email href = "mailto:#{email}"
+          = email
+
+
+    javascript:
+      ready();

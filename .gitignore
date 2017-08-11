@@ -1,0 +1,7 @@
+*.swp
+*.swo
+
+.sass-cache
+*.css.map
+
+src/projects
