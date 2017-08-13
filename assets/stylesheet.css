@@ -35,6 +35,10 @@ h1, h2, h3, h4 {
 #intro {
   font-family: 'Nunito', sans-serif; }
 
+#about .tool {
+  display: inline-block;
+  margin: 12px 32px; }
+
 #work .project {
   position: relative;
   max-width: 600px;

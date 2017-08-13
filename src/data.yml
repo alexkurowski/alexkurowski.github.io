@@ -3,6 +3,12 @@ title: Full Stack Software Engineer
 email: alex.zneue@gmail.com
 
 
+tools:
+  - Rails/Ruby
+  - Node/JavaScript
+  - Phoenix/Elixir
+
+
 projects:
   Yogile:
     description: Development of a easy-to-use photo sharing platform

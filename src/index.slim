@@ -4,6 +4,7 @@
 - name     = data['name']
 - title    = data['title']
 - email    = data['email']
+- tools    = data['tools']
 - projects = data['projects']
 - personal = data['personal']
 
@@ -34,7 +35,8 @@ html
 
     #about.page
       .content
-        h3 List of usual tools here
+        - tools.each do |tool|
+          .tool = tool
 
 
     #work.page
