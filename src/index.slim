@@ -35,10 +35,16 @@ html
 
         .contacts
           .divided-list
-            a.email href = "mailto:#{email}"
+            a.email [
+              href = "mailto:#{email}"
+              target = "_blank"
+            ]
               = email
             span.divider
-            a.link href = "#{github}"
+            a.link [
+              href = "#{github}"
+              target = "_blank"
+            ]
               | github
 
 
@@ -46,10 +52,9 @@ html
       .content
         h2 Work experience
 
-        .hr
         - projects.each do |project|
           .project
-            .project-info.info
+            .project-info
               .title = project['title']
               .description = project['description']
 
@@ -58,7 +63,10 @@ html
                 = work
 
             .info.pull-right
-              a.link href = project['link']['href']
+              a.link [
+                href = project['link']['href']
+                target = "_blank"
+              ]
                 = project['link']['text']
             .hr
 
@@ -67,14 +75,17 @@ html
       .content
         h2 Personal projects
 
-        .hr
         - personal.each do |project|
           .project
             .project-info
               .title = project['title']
               .description = project['description']
+
             .info.pull-right
-              a.link href = project['link']['href']
+              a.link [
+                href = project['link']['href']
+                target = "_blank"
+              ]
                 = project['link']['text']
             .hr
 
@@ -82,8 +93,14 @@ html
     #contact.page.dark
       .content
         .divided-list
-          a.email.inverse href = "mailto:#{email}"
+          a.email.inverse [
+            href = "mailto:#{email}"
+            target = "_blank"
+          ]
             = email
           span.divider |
-          a.link.inverse href = "#{github}"
+          a.link.inverse [
+            href = "#{github}"
+            target = "_blank"
+          ]
             | github

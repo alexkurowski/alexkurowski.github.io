@@ -60,6 +60,9 @@ h1, h2 {
   max-width: 32rem;
   margin: 1rem auto;
   text-align: left; }
+#work .project-info,
+#personal .project-info {
+  margin: 1rem 0; }
 #work .info,
 #personal .info {
   margin: .5rem 0; }
