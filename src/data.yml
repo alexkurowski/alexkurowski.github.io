@@ -34,7 +34,7 @@ projects:
       text: mentspot.com
 
   -
-    title: Skilsmässa
+    title: Skilsmässa Online
     description: A website for hiring a divorce lawyer in Sweden
     work:
       - Front-end performance improvements
@@ -47,7 +47,7 @@ projects:
     title: BluuBeam
     description: A client-facing dashboard for iBeacons management
     work:
-      - Full-stack development of user-facing and admin dashboards
+      - Full-stack development of user and admin dashboards
       - API development for iBeacon webhooks
     link:
       href: https://bluubeam.com
