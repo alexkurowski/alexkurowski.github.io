@@ -1,45 +1,101 @@
 name: Alex Kurowski
-title: Full Stack Software Engineer
+title: Full-Stack Software Engineer
 email: alex.zneue@gmail.com
+github: https://github.com/alexkurowski
 
 
 tools:
-  - Rails/Ruby
-  - Node/JavaScript
-  - Phoenix/Elixir
+  - Ruby/Rails
+  - JavaScript/Node
+  - Elixir/Phoenix
 
 
 projects:
-  Yogile:
-    description: Development of a easy-to-use photo sharing platform
-    link: https://yogile.com
+  -
+    title: Yogile
+    description: An easy-to-use photo sharing platform
+    work:
+      - Front-end development
+      - Back-end development
+    link:
+      href: https://yogile.com
+      text: yogile.com
 
-  Mentspot:
-    description: Development of a social platform connecting mentors and mentees
-    link: https://www.mentspot.com
+  -
+    title: Mentspot
+    description: A social platform connecting mentors and mentees
+    work:
+      - Front-end development
+      - Back-end development
+    link:
+      href: https://www.mentspot.com
+      text: mentspot.com
 
-  BluuBeam:
+  -
+    title: Skilsmässa
+    description: Hire a divorce lawyer in Sweden
+    work:
+      - Front-end performance improvements
+      - Back-end payment system improvements
+    link:
+      href: http://www.skilsmassaonline.se
+      text: www.skilsmassaonline.se
+
+  -
+    title: BluuBeam
     description: A client-facing dashboard for iBeacons management
-    link: https://bluubeam.com/
+    work:
+      - Front-end development
+      - Back-end development
+    link:
+      href: https://bluubeam.com
+      text: bluubeam.com
 
-  Doublemetrics:
-    description: JavaScript library for measuring how users interact with your website
-    link: http://doublemetrics.com/index
+  -
+    title: Doublemetrics
+    description: JavaScript analytics library
+    work:
+      - Development of a JavaScript library
+      - Tracking snippet
+    link:
+      href: http://doublemetrics.com
+      text: doublemetrics.com
 
-  Viewpoint:
+  -
+    title: Viewpoint
     description: API contributions
-    link: https://github.com/alexkurowski/Viewpoint/compare/6058707dd38dbfd0fa5e29d5685246ea5905fe07...31d121dd68af831d78498e1d61645f069f0ce4d9
+    work:
+      - General development
+    link:
+      href: https://github.com/alexkurowski/Viewpoint/compare/6058707dd38dbfd0fa5e29d5685246ea5905fe07...31d121dd68af831d78498e1d61645f069f0ce4d9
+      text: github
 
 
 personal:
-  Patches:
-    description: A puzzle game made with Unity
+  -
+    title: Bookva
+    description: A desktop application for creative writers
+    link:
+      href: https://github.com/alexkurowski/bookva-app
+      text: source
 
-  Nabookov:
+  -
+    title: Nabookov
     description: A platform for serial writers
+    link:
+      href: https://github.com/alexkurowski/nabookov
+      text: source
 
-  Swaps:
+  -
+    title: Swaps
     description: A puzzle game made with Haxe
+    link:
+      href: https://play.google.com/store/apps/details?id=com.mapisoft.swaps
+      text: link
 
-  DGUP:
-    description: A tetris clone with multiple game modes
+  -
+    title: DGUP
+    description: A mini-tetris clone
+    link:
+      href: https://play.google.com/store/apps/details?id=com.mapisoft.dgup
+      text: link

@@ -1,9 +1,12 @@
 $fg-color: #2a2a2d;
 $bg-color: #efefee;
+$action-color-dark: #008844;
+$action-color-dark-hover: #1dc97f;
+$action-color-light: #1dc97f;
+$action-color-light-hover: #efefee;
 
 body {
   color: $fg-color;
-  background: $bg-color;
   padding: 0;
   margin: 0;
 
@@ -12,31 +15,53 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: normal;
-  text-shadow: 0 1px 0 white;
 }
 
+h1, h2 {
+  font-family: 'Nunito', sans-serif;
+}
 
-#navbar {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 8px;
-  z-index: 10;
+.email,
+.link {
+  color: $action-color-dark;
+  padding: 1rem;
+  margin: -1rem;
+  text-decoration: none;
+  transition: color .3s;
 
-  > span {
-    cursor: pointer;
-    padding: 8px;
+  &:hover {
+    color: $action-color-dark-hover;
+  }
+
+  &.inverse {
+    color: $action-color-light;
 
     &:hover {
-      opacity: 0.8;
+      color: $action-color-light-hover;
     }
   }
 }
 
+.divided-list {
+  span.divider {
+    display: inline-block;
+    width: 3rem;
+  }
+
+  @media(max-width: 567px) {
+    > * {
+      display: block;
+      line-height: 1.5rem;
+    }
+
+    span.divider {
+      display: none;
+    }
+  }
+}
 
 .page {
-  padding: 42px;
+  padding: 2rem;
   text-align: center;
 
   &.dark {
@@ -51,99 +76,69 @@ h1, h2, h3, h4 {
 }
 
 
-.content {
-}
-
-
-#intro {
-  font-family: 'Nunito', sans-serif;
-}
-
-
 #about {
-  .tool {
-    display: inline-block;
-    margin: 12px 32px;
+  .content > * {
+    line-height: 2rem;
+    margin: 1.6rem 0;
+  }
+
+  .contacts {
+    margin-bottom: 0;
   }
 }
 
 
-#work {
+#work,
+#personal {
   .project {
     position: relative;
-    max-width: 600px;
-    margin: 16px auto;
-  }
-
-  .project-gallery {
-    position: relative;
-    background: white;
-    background-position: top;
-    background-size: cover;
-    width: 400px;
-    height: 240px;
-    margin: 16px auto;
-    cursor: pointer;
-
-    &.browsable {
-      &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: red;
-        border-top: 0px solid #ccc;
-        border-left: 0px solid #ccc;
-        border-right: 0px solid $bg-color;
-        border-bottom: 0px solid $bg-color;
-        transition: border 0.2s;
-      }
-
-      &:hover {
-        &:after {
-          border-width: 12px;
-        }
-      }
-    }
-
-    &.turned {
-      &:after {
-        transition: border 0.15s;
-        border-width: 0 !important;
-      }
-    }
-  }
-
-  .project-info {
+    max-width: 32rem;
+    margin: 1rem auto;
     text-align: left;
   }
 
-  .project-title {
-    font-size: 1.2em;
+  .info {
+    margin: .5rem 0;
   }
 
-  .project-link {
-    display: inline-block;
-    color: $fg-color;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin: 10px 0;
-    text-decoration: none;
+  .pull-right {
+    text-align: right;
+  }
 
-    &:hover {
-      color: $bg-color;
-      background: $fg-color;
+  .project-info {
+    div {
+      display: inline-block;
     }
+
+    .title {
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding-right: 1rem;
+    }
+
+    .description {
+      color: rgba( $fg-color, 0.8 );
+    }
+  }
+
+  .work-entry:before {
+    content: '• ';
+    display: inline;
+  }
+
+  .hr {
+    margin: 1.5rem 0;
+    height: 1rem;
+  }
+}
+
+
+#personal {
+  .project {
+    max-width: 26rem;
   }
 }
 
 
 #contact {
-}
-
-
-.clear {
-  clear: both;
 }

@@ -4,6 +4,7 @@
 - name     = data['name']
 - title    = data['title']
 - email    = data['email']
+- github   = data['github']
 - tools    = data['tools']
 - projects = data['projects']
 - personal = data['personal']
@@ -18,63 +19,71 @@ html
 
     link rel='stylesheet' href='assets/stylesheet.css'
     link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'
-    script src='assets/script.js'
 
   body
-    #navbar
-      span About
-      span Projects
-      span Contact
-
-
-    #intro.page
+    #about.page
       .content
         h1 = name
         h2 = title
 
+        .tools
+          .divided-list
+            - tools.each_with_index do |tool, index|
+              - unless index.zero?
+                span.divider
+              span.tool = tool
 
-    #about.page
-      .content
-        - tools.each do |tool|
-          .tool = tool
+        .contacts
+          .divided-list
+            a.email href = "mailto:#{email}"
+              = email
+            span.divider
+            a.link href = "#{github}"
+              | github
 
 
     #work.page
       .content
-        h3 Major projects
+        h2 Work experience
 
-        - projects.each do |name, project|
-          - images = Dir.glob("assets/images/#{name.downcase}*jpg").sort
+        .hr
+        - projects.each do |project|
           .project
-            h4.project-title = name
-            .project-gallery[ class       = "#{'browsable' if images.count > 1}"
-                              onclick     = 'setNextImage(this)'
-                              data-images = images
-                              data-index  = 0 ]
-            .project-description = project['description']
-            a.project-link href = project['link']
-              | link
-            hr
+            .project-info.info
+              .title = project['title']
+              .description = project['description']
+
+            - project['work'].each do |work|
+              .work-entry.info
+                = work
+
+            .info.pull-right
+              a.link href = project['link']['href']
+                = project['link']['text']
+            .hr
 
 
-        h3 Personal projects
+    #personal.page
+      .content
+        h2 Personal projects
 
-        - personal.each do |title, project|
+        .hr
+        - personal.each do |project|
           .project
-            .project-gallery[ onclick     = 'setNextImage(this)'
-                              data-images = Dir.glob("assets/images/#{name.downcase}*jpg") \
-                              data-index  = 0 ]
             .project-info
-              .project-title = title
-              .project-description = project['description']
-            .clear
+              .title = project['title']
+              .description = project['description']
+            .info.pull-right
+              a.link href = project['link']['href']
+                = project['link']['text']
+            .hr
 
 
     #contact.page.dark
       .content
-        a.email href = "mailto:#{email}"
-          = email
-
-
-    javascript:
-      ready();
+        .divided-list
+          a.email.inverse href = "mailto:#{email}"
+            = email
+          span.divider |
+          a.link.inverse href = "#{github}"
+            | github
