@@ -52,7 +52,7 @@ html
       .content
         h2 Work experience
 
-        - projects.each do |project|
+        - projects.each_with_index do |project, index|
           .project
             .project-info
               .title = project['title']
@@ -68,14 +68,16 @@ html
                 target = "_blank"
               ]
                 = project['link']['text']
-            .hr
+
+            - unless index == projects.count - 1
+              .hr
 
 
     #personal.page
       .content
         h2 Personal projects
 
-        - personal.each do |project|
+        - personal.each_with_index do |project, index|
           .project
             .project-info
               .title = project['title']
@@ -87,7 +89,9 @@ html
                 target = "_blank"
               ]
                 = project['link']['text']
-            .hr
+
+            - unless index == personal.count - 1
+              .hr
 
 
     #contact.page.dark
