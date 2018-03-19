@@ -39,9 +39,12 @@ h1, h2 {
     display: none; } }
 
 .page {
+  max-width: 100rem;
   padding: 2rem;
+  margin: 0 auto;
   text-align: center; }
-  .page.dark {
+  .page.footer {
+    max-width: initial;
     color: #efefee;
     background: #2a2a2d; }
   .page.fullscreen {
@@ -56,10 +59,17 @@ h1, h2 {
 
 #work .project,
 #personal .project {
+  display: inline-block;
   position: relative;
-  max-width: 32rem;
-  margin: 1rem auto;
-  text-align: left; }
+  width: 30rem;
+  margin: 1rem 2rem;
+  text-align: left;
+  vertical-align: top; }
+  @media (max-width: 567px) {
+    #work .project,
+    #personal .project {
+      max-width: 80vw;
+      margin: 0; } }
 #work .project-info,
 #personal .project-info {
   margin: 1rem 0; }
@@ -69,8 +79,10 @@ h1, h2 {
 #work .pull-right,
 #personal .pull-right {
   text-align: right; }
-#work .project-info div,
-#personal .project-info div {
+#work .project-info .title,
+#work .project-info .description,
+#personal .project-info .title,
+#personal .project-info .description {
   display: inline-block; }
 #work .project-info .title,
 #personal .project-info .title {
@@ -78,21 +90,40 @@ h1, h2 {
   padding-right: 1rem; }
 #work .project-info .description,
 #personal .project-info .description {
-  color: rgba(42, 42, 45, 0.65); }
+  color: rgba(42, 42, 45, 0.7);
+  font-size: 0.8rem; }
   @media (min-width: 568px) {
     #work .project-info .description,
     #personal .project-info .description {
-      float: right; } }
+      float: right;
+      line-height: 1rem; } }
+#work .project-info .time,
+#personal .project-info .time {
+  color: rgba(42, 42, 45, 0.7);
+  font-size: 0.8rem;
+  text-align: right; }
+  @media (max-width: 567px) {
+    #work .project-info .time,
+    #personal .project-info .time {
+      text-align: left;
+      margin-top: .5rem; } }
 #work .work-entry:before,
 #personal .work-entry:before {
   content: '• ';
   display: inline; }
+#work .tech,
+#personal .tech {
+  color: rgba(42, 42, 45, 0.7); }
+  #work .tech:before,
+  #personal .tech:before {
+    content: 'TECH: ';
+    display: inline; }
 #work .hr,
 #personal .hr {
-  margin: 1.5rem 0;
-  height: 2rem; }
-
-#personal .project {
-  max-width: 26rem; }
+  height: 1rem; }
+  @media (max-width: 567px) {
+    #work .hr,
+    #personal .hr {
+      height: 2rem; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

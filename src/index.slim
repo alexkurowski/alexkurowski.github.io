@@ -42,10 +42,10 @@ html
               = email
             span.divider
             a.link [
-              href = "#{github}"
+              href = "#{github['href']}"
               target = "_blank"
             ]
-              | github
+              = github['text']
 
 
     #work.page
@@ -57,10 +57,15 @@ html
             .project-info
               .title = project['title']
               .description = project['description']
+              br
+              .time = project['time']
 
             - project['work'].each do |work|
               .work-entry.info
                 = work
+
+            .tech.info
+              = project['tech']
 
             .info.pull-right
               a.link [
@@ -75,13 +80,20 @@ html
 
     #personal.page
       .content
-        h2 Personal projects
+        h2 Personal solo projects
 
         - personal.each_with_index do |project, index|
           .project
             .project-info
               .title = project['title']
               .description = project['description']
+
+            - project['work'].each do |work|
+              .work-entry.info
+                = work
+
+            .tech.info
+              = project['tech']
 
             .info.pull-right
               a.link [
@@ -94,7 +106,7 @@ html
               .hr
 
 
-    #contact.page.dark
+    #contact.page.footer
       .content
         .divided-list
           a.email.inverse [
@@ -104,10 +116,10 @@ html
             = email
           span.divider |
           a.link.inverse [
-            href = "#{github}"
+            href = "#{github['href']}"
             target = "_blank"
           ]
-            | github
+            = github['text']
 
 
     script [ async src='https://www.googletagmanager.com/gtag/js?id=UA-113325501-2' ]

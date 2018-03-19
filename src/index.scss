@@ -1,5 +1,6 @@
 $fg-color: #2a2a2d;
 $bg-color: #efefee;
+$subtle-color: rgba( $fg-color, .7 );
 $action-color-dark: #008844;
 $action-color-dark-hover: #1dc97f;
 $action-color-light: #1dc97f;
@@ -61,10 +62,13 @@ h1, h2 {
 }
 
 .page {
+  max-width: 100rem;
   padding: 2rem;
+  margin: 0 auto;
   text-align: center;
 
-  &.dark {
+  &.footer {
+    max-width: initial;
     color: $bg-color;
     background: $fg-color;
   }
@@ -91,10 +95,17 @@ h1, h2 {
 #work,
 #personal {
   .project {
+    display: inline-block;
     position: relative;
-    max-width: 32rem;
-    margin: 1rem auto;
+    width: 30rem;
+    margin: 1rem 2rem;
     text-align: left;
+    vertical-align: top;
+
+    @media(max-width: 567px) {
+      max-width: 80vw;
+      margin: 0;
+    }
   }
 
   .project-info {
@@ -110,7 +121,8 @@ h1, h2 {
   }
 
   .project-info {
-    div {
+    .title,
+    .description {
       display: inline-block;
     }
 
@@ -120,10 +132,23 @@ h1, h2 {
     }
 
     .description {
-      color: rgba( $fg-color, 0.65 );
+      color: $subtle-color;
+      font-size: 0.8rem;
 
       @media(min-width: 568px) {
         float: right;
+        line-height: 1rem;
+      }
+    }
+
+    .time {
+      color: $subtle-color;
+      font-size: 0.8rem;
+      text-align: right;
+
+      @media(max-width: 567px) {
+        text-align: left;
+        margin-top: .5rem;
       }
     }
   }
@@ -133,16 +158,21 @@ h1, h2 {
     display: inline;
   }
 
-  .hr {
-    margin: 1.5rem 0;
-    height: 2rem;
+  .tech {
+    color: $subtle-color;
+
+    &:before {
+      content: 'TECH: ';
+      display: inline;
+    }
   }
-}
 
+  .hr {
+    height: 1rem;
 
-#personal {
-  .project {
-    max-width: 26rem;
+    @media(max-width: 567px) {
+      height: 2rem;
+    }
   }
 }
 
