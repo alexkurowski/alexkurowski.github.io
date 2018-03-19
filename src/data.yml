@@ -22,7 +22,7 @@ projects:
       - Mobile application development with react-native
       - API development for mobile application
       - Agile development principles in design and development of the project
-    tech: Ruby on Rails, JavaScript, React.js, iOS, Android, AWS, PureCSS
+    tech: Ruby on Rails, JavaScript, React.js, Redux, iOS, Android, AWS, PureCSS
     link:
       href: https://yogile.com
       text: yogile.com
