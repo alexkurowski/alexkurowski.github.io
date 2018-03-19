@@ -9,6 +9,8 @@
 - projects = data['projects']
 - personal = data['personal']
 
+- no_print_links = %w(github source link)
+
 
 doctype html
 html
@@ -23,29 +25,31 @@ html
   body
     #about.page
       .content
-        h1 = name
-        h2 = title
+        .about-section
+          h1 = name
+          h2 = title
 
-        .tools
-          .divided-list
-            - tools.each_with_index do |tool, index|
-              - unless index.zero?
-                span.divider
-              span.tool = tool
+        .about-section
+          .tools
+            .divided-list
+              - tools.each_with_index do |tool, index|
+                - unless index.zero?
+                  span.divider
+                span.tool = tool
 
-        .contacts
-          .divided-list
-            a.email [
-              href = "mailto:#{email}"
-              target = "_blank"
-            ]
-              = email
-            span.divider
-            a.link [
-              href = "#{github['href']}"
-              target = "_blank"
-            ]
-              = github['text']
+          .contacts
+            .divided-list
+              a.email [
+                href = "mailto:#{email}"
+                target = "_blank"
+              ]
+                = email
+              span.divider
+              a.link [
+                href = "#{github['href']}"
+                target = "_blank"
+              ]
+                = github['text']
 
 
     #work.page
@@ -67,7 +71,9 @@ html
             .tech.info
               = project['tech']
 
-            .info.pull-right
+            .info.pull-right [
+              class = '#{ 'no-print' if no_print_links.include? project['link']['text'] }'
+            ]
               a.link [
                 href = project['link']['href']
                 target = "_blank"
@@ -95,7 +101,9 @@ html
             .tech.info
               = project['tech']
 
-            .info.pull-right
+            .info.pull-right [
+              class = '#{ 'no-print' if no_print_links.include? project['link']['text'] }'
+            ]
               a.link [
                 href = project['link']['href']
                 target = "_blank"
@@ -106,7 +114,7 @@ html
               .hr
 
 
-    #contact.page.footer
+    #contact.page.footer.no-print
       .content
         .divided-list
           a.email.inverse [

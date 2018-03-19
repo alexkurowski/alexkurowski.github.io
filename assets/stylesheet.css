@@ -50,18 +50,34 @@ h1, h2 {
   .page.fullscreen {
     min-height: 100vh;
     padding: 0; }
+  @media print {
+    .page {
+      padding: 1rem; } }
 
-#about .content > * {
+#about .about-section > * {
   line-height: 2rem;
   margin: 1.6rem 0; }
 #about .contacts {
   margin-bottom: 0; }
+@media print {
+  #about {
+    margin-top: 2rem; }
+    #about .about-section {
+      display: inline-block;
+      width: 50%;
+      vertical-align: bottom;
+      margin: 0; }
+      #about .about-section * {
+        margin: 0; }
+      #about .about-section h1, #about .about-section h2 {
+        text-align: left;
+        margin-left: 3rem; } }
 
 #work .project,
 #personal .project {
   display: inline-block;
   position: relative;
-  width: 30rem;
+  width: 28rem;
   margin: 1rem 2rem;
   text-align: left;
   vertical-align: top; }
@@ -70,6 +86,10 @@ h1, h2 {
     #personal .project {
       max-width: 80vw;
       margin: 0; } }
+  @media print {
+    #work .project,
+    #personal .project {
+      margin-bottom: 0; } }
 #work .project-info,
 #personal .project-info {
   margin: 1rem 0; }
@@ -125,5 +145,13 @@ h1, h2 {
     #work .hr,
     #personal .hr {
       height: 2rem; } }
+@media print {
+  #work h2,
+  #personal h2 {
+    margin: 0; } }
+
+@media print {
+  .no-print {
+    display: none; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -77,17 +77,41 @@ h1, h2 {
     min-height: 100vh;
     padding: 0;
   }
+
+  @media print {
+    padding: 1rem;
+  }
 }
 
 
 #about {
-  .content > * {
+  .about-section > * {
     line-height: 2rem;
     margin: 1.6rem 0;
   }
 
   .contacts {
     margin-bottom: 0;
+  }
+
+  @media print {
+    margin-top: 2rem;
+
+    .about-section {
+      display: inline-block;
+      width: 50%;
+      vertical-align: bottom;
+      margin: 0;
+
+      * {
+        margin: 0;
+      }
+
+      h1, h2 {
+        text-align: left;
+        margin-left: 3rem;
+      }
+    }
   }
 }
 
@@ -97,7 +121,7 @@ h1, h2 {
   .project {
     display: inline-block;
     position: relative;
-    width: 30rem;
+    width: 28rem;
     margin: 1rem 2rem;
     text-align: left;
     vertical-align: top;
@@ -105,6 +129,10 @@ h1, h2 {
     @media(max-width: 567px) {
       max-width: 80vw;
       margin: 0;
+    }
+
+    @media print {
+      margin-bottom: 0;
     }
   }
 
@@ -174,8 +202,20 @@ h1, h2 {
       height: 2rem;
     }
   }
+
+  @media print {
+    h2 {
+      margin: 0;
+    }
+  }
 }
 
 
 #contact {
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
 }
