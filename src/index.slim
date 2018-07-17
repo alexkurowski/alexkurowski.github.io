@@ -22,6 +22,14 @@ html
     link rel='stylesheet' href='assets/stylesheet.css'
     link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'
 
+    script [ async src='https://www.googletagmanager.com/gtag/js?id=UA-113325501-2' ]
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-113325501-2');
+
+
   body
     #about.page
       .content
@@ -128,12 +136,3 @@ html
             target = "_blank"
           ]
             = github['text']
-
-
-    script [ async src='https://www.googletagmanager.com/gtag/js?id=UA-113325501-2' ]
-    javascript:
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-113325501-2');
