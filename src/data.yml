@@ -28,6 +28,20 @@ projects:
       text: yogile.com
 
   -
+    title: Skilsmässa Online
+    description: A website for hiring a divorce lawyer in Sweden
+    time: Aug 2017 to Nov 2018
+    work:
+      - Full-stack development
+      - Front-end performance improvements
+      - Work on back-end payment system
+      - Deployment and start-up time performance optimizations
+    tech: Ruby on Rails, JavaScript, Slim, Sass
+    link:
+      href: https://www.skilsmassaonline.se
+      text: skilsmassaonline.se
+
+  -
     title: Mentspot
     description: A social platform connecting mentors and mentees
     time: Jan 2015 to Feb 2016
@@ -40,17 +54,16 @@ projects:
       text: mentspot.com
 
   -
-    title: Skilsmässa Online
-    description: A website for hiring a divorce lawyer in Sweden
-    time: Aug 2017 to Mar 2018
+    title: Luxury Affairs
+    description: A real estate sale/rent platform
+    time: Mar 2018 to Nov 2018
     work:
-      - Front-end performance improvements
-      - Work on back-end payment system
-      - Deployment and start-up time performance optimizations
-    tech: Ruby on Rails, JavaScript, Slim, Sass
+      - Front-end development
+      - Open source contribution
+    tech: JavaScript
     link:
-      href: http://www.skilsmassaonline.se
-      text: skilsmassaonline.se
+      href: https://luxuryaffairs.co.uk/en/
+      text: luxuryaffairs.co.uk
 
   -
     title: BluuBeam
