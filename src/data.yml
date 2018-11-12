@@ -54,13 +54,26 @@ projects:
       text: mentspot.com
 
   -
+    title: Holaplaya
+    description: An informative beach-related travel website
+    time: Jul 2018 to Oct 2018
+    work:
+      - Full-stack development of client and admin sections
+      - Development of a flexible back-end geo structure
+      - Third-party website parsing
+    tech: Ruby on Rails, CoffeeScript, Slim, Sass
+    link:
+      href: https://holaplaya.com
+      text: holaplaya.com
+
+  -
     title: Luxury Affairs
     description: A real estate sale/rent platform
     time: Mar 2018 to Nov 2018
     work:
       - Front-end development
       - Open source contribution
-    tech: JavaScript
+    tech: JavaScript, PHP
     link:
       href: https://luxuryaffairs.co.uk/en/
       text: luxuryaffairs.co.uk
