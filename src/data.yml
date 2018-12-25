@@ -30,7 +30,7 @@ projects:
   -
     title: Skilsmässa Online
     description: A website for hiring a divorce lawyer in Sweden
-    time: Aug 2017 to Nov 2018
+    time: Aug 2017 to Dec 2018
     work:
       - Full-stack development
       - Front-end performance improvements
@@ -56,7 +56,7 @@ projects:
   -
     title: Holaplaya
     description: An informative beach-related travel website
-    time: Jul 2018 to Oct 2018
+    time: Jul 2018 to Nov 2018
     work:
       - Full-stack development of client and admin sections
       - Development of a flexible back-end geo structure
