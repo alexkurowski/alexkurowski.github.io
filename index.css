@@ -327,7 +327,8 @@ template {
     font-family: monospace;
     font-weight: normal;
     letter-spacing: 0.1em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: border 0.2s; }
     .landing__link:hover {
       border-bottom: 2px solid #f8f8f8;
       opacity: 1; }
@@ -364,7 +365,9 @@ main.portfolio {
 a {
   color: #333;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s; }
   a:hover {
     opacity: 0.6; }
 
