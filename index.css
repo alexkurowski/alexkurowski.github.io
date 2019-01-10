@@ -490,5 +490,8 @@ a {
   transition: box-shadow 0.3s; }
   .project__screenshot:hover {
     box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.8); }
+.project__link {
+  display: block;
+  margin-top: 1rem; }
 
 /*# sourceMappingURL=index.css.map */
