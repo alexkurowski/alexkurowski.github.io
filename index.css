@@ -338,7 +338,7 @@ html, body {
 body {
   position: relative;
   background: black;
-  font-family: Lato, sans-serif;
+  font-family: Archivo, sans-serif;
   font-size: 18px;
   line-height: 1.2em; }
   body ::selection {
@@ -356,7 +356,6 @@ main.portfolio {
   box-sizing: border-box; }
 
 .heading {
-  font-family: Lato, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   line-height: initial;
