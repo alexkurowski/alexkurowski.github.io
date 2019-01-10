@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-sass src/index.scss assets/stylesheet.css
-slimrb -o encoding=\"UTF-8\" src/index.slim index.html
-ruby -run -e httpd . -p 4000
