@@ -367,7 +367,7 @@ a {
   font-weight: bold;
   text-decoration: none;
   opacity: 1;
-  transition: opacity 0.3s; }
+  transition: opacity 0.2s; }
   a:hover {
     opacity: 0.6; }
 
@@ -399,7 +399,8 @@ a {
   .header__link {
     display: inline-block;
     padding: 1rem;
-    line-height: 0; }
+    line-height: 0;
+    opacity: 0.8; }
     .header__link__image {
       width: 1.5rem; }
 
@@ -481,9 +482,11 @@ a {
   font-size: 18px;
   list-style: none; }
 
-.projects a {
+.projects__link {
   display: inline-block;
   padding: 0.15rem 0; }
+.projects__excerpt {
+  opacity: 0.8; }
 
 .project__screenshot {
   width: 100%;
@@ -495,5 +498,10 @@ a {
 .project__link {
   display: block;
   margin-top: 1rem; }
+.project .heading {
+  opacity: 0.75; }
+@media (min-width: 768px) {
+  .project .column-big {
+    margin-left: 2rem; } }
 
 /*# sourceMappingURL=index.css.map */
