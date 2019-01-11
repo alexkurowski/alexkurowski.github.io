@@ -400,6 +400,9 @@ a {
 .sidebar__link {
   display: block;
   padding: 0.15rem 0; }
+  @media (max-width: 767px) {
+    .sidebar__link {
+      display: none; } }
 
 .lightbox {
   display: flex;
