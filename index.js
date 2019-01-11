@@ -119,8 +119,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var turbolinks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(turbolinks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./portfolio */ "./src/scripts/portfolio.js");
 /* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_portfolio__WEBPACK_IMPORTED_MODULE_1__);
+ // Turbolinks.start();
 
-turbolinks__WEBPACK_IMPORTED_MODULE_0___default.a.start();
 
 
 /***/ }),
