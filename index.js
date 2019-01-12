@@ -97,8 +97,6 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./portfolio */ "./src/scripts/portfolio.js");
 /* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_portfolio__WEBPACK_IMPORTED_MODULE_0__);
-// import Turbolinks from "turbolinks";
-// Turbolinks.start();
 
 
 /***/ }),
@@ -110,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.addEventListener('turbolinks:load', function () {
+window.addEventListener('load', function () {
   let lightbox;
 
   function createLightbox(original) {
