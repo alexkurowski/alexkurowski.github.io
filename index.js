@@ -133,15 +133,19 @@ window.addEventListener('load', function () {
     }
   }
 
-  document.addEventListener('keyup', function (event) {
+  document.addEventListener('keyup', event => {
     if (event.keyCode === 27 && lightbox) {
       removeLightbox();
     }
   });
-  document.addEventListener('click', function (event) {
+  document.addEventListener('click', event => {
     if (event.target.dataset.hasOwnProperty('lightbox')) {
       lightbox = createLightbox(event.target);
     }
+  });
+  const projects = document.querySelectorAll('.projects > li');
+  projects.forEach(project => {
+    console.log(project);
   });
 });
 
