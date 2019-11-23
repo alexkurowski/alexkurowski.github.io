@@ -471,7 +471,7 @@ a {
   position: relative; }
   @media (min-width: 768px) {
     .projects__project:hover .info-window {
-      right: 0;
+      transform: translateX(0);
       opacity: 1; } }
 
 .project__screenshot {
@@ -493,7 +493,7 @@ a {
 .info-window {
   position: absolute;
   top: 0;
-  right: 2rem;
+  right: 0;
   max-width: 30vw;
   padding: 1rem;
   background: white;
@@ -504,7 +504,8 @@ a {
   z-index: 1;
   box-sizing: border-box;
   user-select: none;
-  transition: right 0.2s, opacity 0.2s; }
+  transform: translateX(-32px);
+  transition: transform 0.2s, opacity 0.2s; }
   .info-window .heading {
     opacity: 1; }
   .info-window__screenshot {
